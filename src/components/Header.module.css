@@ -44,3 +44,10 @@
   cursor: pointer;
   background-color: white;
 }
+
+.sale {
+  display: flex;
+  gap: 6px;
+  width: 70px;
+  color: red;
+}

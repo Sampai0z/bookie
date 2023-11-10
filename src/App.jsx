@@ -1,6 +1,8 @@
 import "./App.css";
 import Header from "./components/header";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NewReleases from "./pages/NewReleases";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -8,9 +10,9 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          {/* <Route path="/" element={<AllMeetupsPage />} />
-          <Route path="/new-meetup" element={<NewMeetupsPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/new-releases" element={<NewReleases />} />
+          {/* <Route path="/favorites" element={<FavoritesPage />} /> */}
         </Routes>
       </BrowserRouter>
     </>
