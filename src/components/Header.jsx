@@ -6,7 +6,11 @@ function header() {
     <nav>
       <div className={classes.teste}>
         <div>
-          <h1 className={classes.title}>Bookie</h1>
+          <h1 className={classes.title}>
+            <Link className={classes.heading} to="/">
+              Bookie
+            </Link>
+          </h1>
         </div>
         <div className={classes.teste}>
           <input
