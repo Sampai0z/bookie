@@ -1,9 +1,11 @@
-import harryImage from "../assets/harry.jpg";
+// import harryImage from "../assets/harry.jpg";
 import loading from "../assets/loading.png";
+
+import PropTypes from "prop-types";
 import classes from "./Books.module.css";
 import Placeholder from "react-bootstrap/Placeholder";
 
-export default function Book() {
+export default function Book(props) {
   return (
     <>
       {(
@@ -27,15 +29,22 @@ export default function Book() {
         </div>
       ) && (
         <div className={classes.book}>
-          <img src={harryImage} alt="..." width={150} />
-          <h6 className="mt-1">The Title</h6>
-          <p className={classes.author}>Author</p>
+          <img src={props.image} alt="..." width={150} />
+          <h6 className="mt-1">{props.title}</h6>
+          <p className={classes.author}>{props.author}</p>
           <div className={classes.price}>
             <span>$17</span>
-            <button className={classes.buy}>Buy</button>
+            <button className={classes.buy}>{props.votes}</button>
           </div>
         </div>
       )}
     </>
   );
 }
+// Adicione validação de tipo usando PropTypes
+Book.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  votes: PropTypes.number.isRequired, // Exige que 'votes' seja um número e seja obrigatório
+};
