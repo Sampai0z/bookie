@@ -1,0 +1,25 @@
+.book {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.author {
+  margin-bottom: 0px;
+}
+.buy {
+  padding: 10px;
+  border-radius: 30px;
+  width: 70px;
+  height: 35px;
+  line-height: 1px;
+  background-color: white;
+  border: 1px solid;
+}
+.buy:hover {
+  background-color: rgb(216, 213, 213);
+}

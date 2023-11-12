@@ -1,0 +1,8 @@
+.lineBook {
+  display: flex;
+  gap: 5rem;
+  overflow-x: auto;
+}
+/* .lineBook::-webkit-scrollbar {
+  width: 0;
+} */
