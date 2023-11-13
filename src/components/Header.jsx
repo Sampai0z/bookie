@@ -5,7 +5,6 @@ export default function Header() {
   const navigate = useNavigate();
 
   const handlerCart = () => {
-    console.log("1");
     navigate("/cart");
   };
 
@@ -84,7 +83,7 @@ export default function Header() {
           </li>
           <li>
             <Link className={classes.lista} to="/">
-              Books
+              E-Books
             </Link>
           </li>
           <li>
