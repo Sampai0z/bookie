@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import Carrousel from "../components/Carrousel";
-import Book from "../components/Books.jsx";
+import { Book, LoadingBooks } from "../components/Books.jsx";
 import { useEffect, useState } from "react";
 import classes from "./Home.module.css";
-import "swiper/swiper-bundle.css";
 
 export default function Home() {
   const [books, setbooks] = useState([]);
@@ -12,7 +11,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const url = "https://hapi-books.p.rapidapi.com/nominees/romance/2020";
+    const url = "https://hapi-books.p.rapidapi.com/nominees/romance/2020ds";
     const options = {
       method: "GET",
       headers: {
@@ -51,7 +50,7 @@ export default function Home() {
           </div>
           <div className="mt-4">
             <div className={classes.lineBook}>
-              {Array.isArray(books) &&
+              {Array.isArray(books) && books.length > 0 ? (
                 books.map((book) => (
                   <Book
                     key={book.book_id}
@@ -60,7 +59,15 @@ export default function Home() {
                     votes={book.votes}
                     author={book.author}
                   />
-                ))}
+                ))
+              ) : (
+                <>
+                  <LoadingBooks />
+                  <LoadingBooks />
+                  <LoadingBooks />
+                  <LoadingBooks />
+                </>
+              )}
             </div>
           </div>
         </div>
