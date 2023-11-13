@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./Header.module.css";
 
-function header() {
+export default function Header() {
+  const navigate = useNavigate();
+
+  const handlerCart = () => {
+    console.log("1");
+    navigate("/cart");
+  };
+
   return (
     <nav>
       <div className={classes.teste}>
@@ -36,7 +43,7 @@ function header() {
           </button>
         </div>
         <div className={classes.teste}>
-          <button className={classes.cart}>
+          <button className={classes.cart} onClick={handlerCart}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -111,5 +118,3 @@ function header() {
     </nav>
   );
 }
-
-export default header;

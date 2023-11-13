@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NewReleases from "./pages/NewReleases";
 import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-releases" element={<NewReleases />} />
-          {/* <Route path="/favorites" element={<FavoritesPage />} /> */}
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </>
