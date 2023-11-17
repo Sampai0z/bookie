@@ -7,12 +7,12 @@ export const Book = (props) => {
   return (
     <>
       <div className={classes.book}>
-        <img src={props.image} alt="..." width={150} />
+        <img src={props.image} alt="..." width={120} />
         <h6 className="mt-1">{props.title}</h6>
         <p className={classes.author}>{props.author}</p>
         <div className={classes.price}>
-          <span>$17</span>
-          <button className={classes.buy}>{props.votes}</button>
+          <span>{props.price}</span>
+          <button className={classes.buy}>Buy</button>
         </div>
       </div>
     </>
@@ -28,14 +28,11 @@ export const LoadingBooks = () => {
           <Placeholder xs={11} />
         </Placeholder>
         <p className={classes.author}>
-          {" "}
           <Placeholder xs={11} />
         </p>
         <div className={classes.price}>
-          {" "}
           <Placeholder xs={3} />
           <button className={classes.buy}>
-            {" "}
             <Placeholder xs={11} />
           </button>
         </div>
@@ -50,5 +47,5 @@ Book.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
-  votes: PropTypes.number.isRequired, // Exige que 'votes' seja um número e seja obrigatório
+  price: PropTypes.number.isRequired, // Exige que 'votes' seja um número e seja obrigatório
 };

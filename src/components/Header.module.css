@@ -1,7 +1,7 @@
 .teste {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 5px;
 }
 .heading {
@@ -15,6 +15,8 @@
   list-style-type: none;
   text-decoration: none;
   color: black;
+  line-height: 20px;
+  width: 200px;
 }
 
 .searchBar,
@@ -23,6 +25,8 @@
   height: 40px;
   outline: none;
   margin-top: 5px;
+  background-color: rgba(255, 166, 0, 0.185);
+  border: 1px solid orange;
 }
 
 .searchBarButton {
@@ -51,9 +55,21 @@
   cursor: pointer;
   background-color: white;
 }
-.sale {
+.icon {
   display: flex;
-  gap: 6px;
-  width: 70px;
+  gap: 10px;
+  width: 85px;
+}
+.iconRec {
+  display: flex;
+  gap: 10px;
+  width: 155px;
+}
+.sale {
   color: red;
+}
+.l {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
 }
