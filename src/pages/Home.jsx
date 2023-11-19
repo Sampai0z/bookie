@@ -11,7 +11,7 @@ import data from "../assets/data.json";
 export default function Home() {
   const [books, setbooks] = useState([]);
   const bgCarousel = {
-    backgroundColor: "gray",
+    // backgroundColor: "rgb(204, 202, 202)",
   };
 
   useEffect(() => {
@@ -36,6 +36,23 @@ export default function Home() {
     fetchData();
   }, []);
 
+  const renderBooks = () => {
+    return books.map((book) => (
+      <Book
+        key={book.book_id}
+        title={book.title}
+        image={book.image}
+        price={book.price}
+        author={book.author}
+      />
+    ));
+  };
+
+  const renderLoadingBooks = () =>
+    Array(4)
+      .fill()
+      .map((_, index) => <LoadingBooks key={index} />);
+
   return (
     <>
       <div style={bgCarousel}>
@@ -54,24 +71,9 @@ export default function Home() {
           </Col>
           <Col className="mt-4">
             <div className={classes.lineBook}>
-              {Array.isArray(books) && books.length > 0 ? (
-                books.map((book) => (
-                  <Book
-                    key={book.book_id}
-                    title={book.title}
-                    image={book.image}
-                    price={book.price}
-                    author={book.author}
-                  />
-                ))
-              ) : (
-                <>
-                  <LoadingBooks />
-                  <LoadingBooks />
-                  <LoadingBooks />
-                  <LoadingBooks />
-                </>
-              )}
+              {Array.isArray(books) && books.length > 0
+                ? renderBooks()
+                : renderLoadingBooks()}
             </div>
           </Col>
         </Row>

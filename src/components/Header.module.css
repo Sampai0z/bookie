@@ -1,4 +1,4 @@
-.teste {
+.flex {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -18,6 +18,16 @@
   line-height: 20px;
   width: 200px;
 }
+.LinkIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  gap: 10px;
+  width: 200px;
+}
 
 .searchBar,
 .searchBar:active {
@@ -25,8 +35,8 @@
   height: 40px;
   outline: none;
   margin-top: 5px;
-  background-color: rgba(255, 166, 0, 0.185);
-  border: 1px solid orange;
+  background-color: rgba(248, 213, 148, 0.185);
+  border: 1px solid rgb(221, 186, 120);
 }
 
 .searchBarButton {
@@ -57,19 +67,9 @@
 }
 .icon {
   display: flex;
-  gap: 10px;
-  width: 85px;
-}
-.iconRec {
-  display: flex;
-  gap: 10px;
-  width: 155px;
+  width: 25px;
+  align-items: center;
 }
 .sale {
   color: red;
-}
-.l {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
 }

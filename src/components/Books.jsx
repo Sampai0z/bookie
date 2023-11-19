@@ -28,12 +28,16 @@ export const LoadingBooks = () => {
           <Placeholder xs={11} />
         </Placeholder>
         <p className={classes.author}>
-          <Placeholder xs={11} />
+          <Placeholder animation="glow">
+            <Placeholder xs={11} />
+          </Placeholder>
         </p>
         <div className={classes.price}>
-          <Placeholder xs={3} />
+          <Placeholder xs={4} />
           <button className={classes.buy}>
-            <Placeholder xs={11} />
+            <Placeholder animation="glow">
+              <Placeholder xs={11} />
+            </Placeholder>
           </button>
         </div>
       </div>
