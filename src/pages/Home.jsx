@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import Carrousel from "../components/Carrousel";
 import { Book, LoadingBooks } from "../components/Books.jsx";
+import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
 import classes from "./Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -10,9 +11,6 @@ import data from "../assets/data.json";
 
 export default function Home() {
   const [books, setbooks] = useState([]);
-  const bgCarousel = {
-    // backgroundColor: "rgb(204, 202, 202)",
-  };
 
   useEffect(() => {
     // const url = "https://hapi-books.p.rapidapi.com/nominees/romance/2023";
@@ -39,7 +37,7 @@ export default function Home() {
   const renderBooks = () => {
     return books.map((book) => (
       <Book
-        key={book.book_id}
+        key={book.id}
         title={book.title}
         image={book.image}
         price={book.price}
@@ -55,15 +53,14 @@ export default function Home() {
 
   return (
     <>
-      <div style={bgCarousel}>
-        <Container>
-          <Row>
-            <Col>
-              <Carrousel />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <Carrousel />
+          </Col>
+        </Row>
+      </Container>
+
       <Container>
         <Row>
           <Col className="mt-4">
@@ -76,8 +73,25 @@ export default function Home() {
                 : renderLoadingBooks()}
             </div>
           </Col>
+          <Col className="mt-4">
+            <div className={classes.lineBook}>
+              {Array.isArray(books) && books.length > 0
+                ? renderBooks()
+                : renderLoadingBooks()}
+            </div>
+          </Col>
+          <Col className="mt-4">
+            <div className={classes.lineBook}>
+              {Array.isArray(books) && books.length > 0
+                ? renderBooks()
+                : renderLoadingBooks()}
+            </div>
+          </Col>
         </Row>
       </Container>
+      <div className={classes.footerPosition}>
+        <Footer />
+      </div>
     </>
   );
 }
