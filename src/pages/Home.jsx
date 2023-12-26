@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unknown-property */
 import Carrousel from "../components/Carrousel";
 import { Book, LoadingBooks } from "../components/Books.jsx";
-import Footer from "../components/Footer.jsx";
+// import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
 import classes from "./Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -64,7 +63,7 @@ export default function Home() {
       <Container>
         <Row>
           <Col className="mt-4">
-            <h1 align="center">Our recommendations</h1>
+            <h1>Our recommendations</h1>
           </Col>
           <Col className="mt-4">
             <div className={classes.lineBook}>
@@ -89,9 +88,6 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-      <div className={classes.footerPosition}>
-        <Footer />
-      </div>
     </>
   );
 }
