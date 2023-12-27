@@ -1,7 +1,7 @@
 .footer {
   background-color: black;
   color: rgb(211, 211, 211);
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-  margin-bottom: 0px;
+  padding-top: 5rem !important;
+  padding-bottom: 10rem !important;
+  margin-bottom: 0px !important;
 }

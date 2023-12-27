@@ -1,7 +1,58 @@
+import { Container, Row, Col } from "react-bootstrap";
+
 export default function NewReleases() {
   return (
-    <div>
-      <h1>teste</h1>
-    </div>
+    <>
+      <Container>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+        <Row>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+          <Col>teste</Col>
+        </Row>
+      </Container>
+    </>
   );
 }

@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart";
 
-import classes from "./pages/Home.module.css";
 import Footer from "./components/Footer.jsx";
 
 function App() {
@@ -20,7 +19,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-      <div className={classes.footerPosition}>
+
+      <div className="footerPosition">
         <Footer />
       </div>
     </>
